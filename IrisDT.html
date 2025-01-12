@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en"><body><p>
+
+    </p>
+<!--  Meta  -->
+<meta charset="utf-8"/>
+<title>Iris Decison Tree</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.0/dist/svg-pan-zoom.min.js"></script>
+<style type="text/css">
+
+
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #mainViewContainer {
+      width: 95%;
+      height: 95%;
+      border: 1px solid black;
+      margin: 10px;
+      padding: 3px;
+      overflow: hidden;
+    }
+
+    #mainView {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+    }
+
+    .thumbViewClass {
+      border: 1px solid black;
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      width: 15%;
+      height: 15%;
+      margin: 3px;
+      padding: 3px;
+      overflow: hidden;
+    }
+
+    #thumbSVG,
+    #mainSVG {
+      height: 100%;
+      width: 100%;
+    }
+
+    #thumbView {
+      z-index: 110;
+      background-color: white;
+    }
+
+    #scopeContainer {
+      z-index: 120;
+    }
+    </style>
+<div id="mainViewContainer">
+<div id="mainView">
+<svg height="899pt" id="mainSVG" viewbox="0.00 0.00 1167.50 899.00" width="1168pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 895)">
+<title>Tree</title>
+<polygon fill="white" points="-4,4 -4,-895 1163.5,-895 1163.5,4 -4,4" stroke="transparent"></polygon>
+<!-- 0 -->
+<g class="node" id="node1">
+<title>0</title>
+<path d="M156,-804.5C156,-804.5 12,-804.5 12,-804.5 6,-804.5 0,-798.5 0,-792.5 0,-792.5 0,-718.5 0,-718.5 0,-712.5 6,-706.5 12,-706.5 12,-706.5 156,-706.5 156,-706.5 162,-706.5 168,-712.5 168,-718.5 168,-718.5 168,-792.5 168,-792.5 168,-798.5 162,-804.5 156,-804.5" fill="#ffffff" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-789.3">node #0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-774.3">petal length (cm) &lt;= 2.45</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-759.3">gini = 0.667</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-744.3">samples = 150</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-729.3">value = [50, 50, 50]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-714.3">class = setosa</text>
+</g>
+<!-- 1 -->
+<g class="node" id="node2">
+<title>1</title>
+<path d="M1145.5,-891C1145.5,-891 1052.5,-891 1052.5,-891 1046.5,-891 1040.5,-885 1040.5,-879 1040.5,-879 1040.5,-820 1040.5,-820 1040.5,-814 1046.5,-808 1052.5,-808 1052.5,-808 1145.5,-808 1145.5,-808 1151.5,-808 1157.5,-814 1157.5,-820 1157.5,-820 1157.5,-879 1157.5,-879 1157.5,-885 1151.5,-891 1145.5,-891" fill="#e58139" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-875.8">node #1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-860.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-845.8">samples = 50</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-830.8">value = [50, 0, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-815.8">class = setosa</text>
+</g>
+<!-- 0&#45;&gt;1 -->
+<g class="edge" id="edge1">
+<title>0-&gt;1</title>
+<path d="M168.22,-774.86C286.48,-802.38 489,-849.5 489,-849.5 489,-849.5 489,-849.5 694,-849.5 694,-849.5 914.87,-849.5 1029.99,-849.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="1030.12,-853 1040.12,-849.5 1030.12,-846 1030.12,-853" stroke="black"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1022.44" y="-863.48">True</text>
+</g>
+<!-- 2 -->
+<g class="node" id="node3">
+<title>2</title>
+<path d="M356.5,-645.5C356.5,-645.5 217.5,-645.5 217.5,-645.5 211.5,-645.5 205.5,-639.5 205.5,-633.5 205.5,-633.5 205.5,-559.5 205.5,-559.5 205.5,-553.5 211.5,-547.5 217.5,-547.5 217.5,-547.5 356.5,-547.5 356.5,-547.5 362.5,-547.5 368.5,-553.5 368.5,-559.5 368.5,-559.5 368.5,-633.5 368.5,-633.5 368.5,-639.5 362.5,-645.5 356.5,-645.5" fill="#ffffff" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-630.3">node #2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-615.3">petal width (cm) &lt;= 1.75</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-600.3">gini = 0.5</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-585.3">samples = 100</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-570.3">value = [0, 50, 50]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-555.3">class = versicolor</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g class="edge" id="edge2">
+<title>0-&gt;2</title>
+<path d="M146.95,-706.5C168.82,-689.19 193.57,-669.62 216.06,-651.83" fill="none" stroke="black"></path>
+<polygon fill="black" points="218.24,-654.56 223.91,-645.61 213.9,-649.07 218.24,-654.56" stroke="black"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="199.08" y="-639.02">False</text>
+</g>
+<!-- 3 -->
+<g class="node" id="node4">
+<title>3</title>
+<path d="M562,-645.5C562,-645.5 418,-645.5 418,-645.5 412,-645.5 406,-639.5 406,-633.5 406,-633.5 406,-559.5 406,-559.5 406,-553.5 412,-547.5 418,-547.5 418,-547.5 562,-547.5 562,-547.5 568,-547.5 574,-553.5 574,-559.5 574,-559.5 574,-633.5 574,-633.5 574,-639.5 568,-645.5 562,-645.5" fill="#4de88e" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-630.3">node #3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-615.3">petal length (cm) &lt;= 4.95</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-600.3">gini = 0.168</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-585.3">samples = 54</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-570.3">value = [0, 49, 5]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-555.3">class = versicolor</text>
+</g>
+<!-- 2&#45;&gt;3 -->
+<g class="edge" id="edge3">
+<title>2-&gt;3</title>
+<path d="M368.6,-596.5C377.48,-596.5 386.59,-596.5 395.61,-596.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="395.76,-600 405.76,-596.5 395.76,-593 395.76,-600" stroke="black"></polygon>
+</g>
+<!-- 12 -->
+<g class="node" id="node13">
+<title>12</title>
+<path d="M562,-242.5C562,-242.5 418,-242.5 418,-242.5 412,-242.5 406,-236.5 406,-230.5 406,-230.5 406,-156.5 406,-156.5 406,-150.5 412,-144.5 418,-144.5 418,-144.5 562,-144.5 562,-144.5 568,-144.5 574,-150.5 574,-156.5 574,-156.5 574,-230.5 574,-230.5 574,-236.5 568,-242.5 562,-242.5" fill="#843de6" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-227.3">node #12</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-212.3">petal length (cm) &lt;= 4.85</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-197.3">gini = 0.043</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-182.3">samples = 46</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-167.3">value = [0, 1, 45]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-152.3">class = virginica</text>
+</g>
+<!-- 2&#45;&gt;12 -->
+<g class="edge" id="edge12">
+<title>2-&gt;12</title>
+<path d="M312.45,-547.49C349.54,-473.11 419.94,-331.97 459.72,-252.21" fill="none" stroke="black"></path>
+<polygon fill="black" points="463.08,-253.31 464.41,-242.8 456.82,-250.19 463.08,-253.31" stroke="black"></polygon>
+</g>
+<!-- 4 -->
+<g class="node" id="node5">
+<title>4</title>
+<path d="M762.5,-703.5C762.5,-703.5 623.5,-703.5 623.5,-703.5 617.5,-703.5 611.5,-697.5 611.5,-691.5 611.5,-691.5 611.5,-617.5 611.5,-617.5 611.5,-611.5 617.5,-605.5 623.5,-605.5 623.5,-605.5 762.5,-605.5 762.5,-605.5 768.5,-605.5 774.5,-611.5 774.5,-617.5 774.5,-617.5 774.5,-691.5 774.5,-691.5 774.5,-697.5 768.5,-703.5 762.5,-703.5" fill="#3de684" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-688.3">node #4</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-673.3">petal width (cm) &lt;= 1.65</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-658.3">gini = 0.041</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-643.3">samples = 48</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-628.3">value = [0, 47, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-613.3">class = versicolor</text>
+</g>
+<!-- 3&#45;&gt;4 -->
+<g class="edge" id="edge4">
+<title>3-&gt;4</title>
+<path d="M574.21,-620.51C583.25,-623.12 592.48,-625.78 601.6,-628.42" fill="none" stroke="black"></path>
+<polygon fill="black" points="600.86,-631.85 611.44,-631.25 602.81,-625.12 600.86,-631.85" stroke="black"></polygon>
+</g>
+<!-- 7 -->
+<g class="node" id="node8">
+<title>7</title>
+<path d="M762.5,-587.5C762.5,-587.5 623.5,-587.5 623.5,-587.5 617.5,-587.5 611.5,-581.5 611.5,-575.5 611.5,-575.5 611.5,-501.5 611.5,-501.5 611.5,-495.5 617.5,-489.5 623.5,-489.5 623.5,-489.5 762.5,-489.5 762.5,-489.5 768.5,-489.5 774.5,-495.5 774.5,-501.5 774.5,-501.5 774.5,-575.5 774.5,-575.5 774.5,-581.5 768.5,-587.5 762.5,-587.5" fill="#c09cf2" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-572.3">node #7</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-557.3">petal width (cm) &lt;= 1.55</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-542.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-527.3">samples = 6</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-512.3">value = [0, 2, 4]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-497.3">class = virginica</text>
+</g>
+<!-- 3&#45;&gt;7 -->
+<g class="edge" id="edge7">
+<title>3-&gt;7</title>
+<path d="M574.21,-572.49C583.25,-569.88 592.48,-567.22 601.6,-564.58" fill="none" stroke="black"></path>
+<polygon fill="black" points="602.81,-567.88 611.44,-561.75 600.86,-561.15 602.81,-567.88" stroke="black"></polygon>
+</g>
+<!-- 5 -->
+<g class="node" id="node6">
+<title>5</title>
+<path d="M1147.5,-790C1147.5,-790 1050.5,-790 1050.5,-790 1044.5,-790 1038.5,-784 1038.5,-778 1038.5,-778 1038.5,-719 1038.5,-719 1038.5,-713 1044.5,-707 1050.5,-707 1050.5,-707 1147.5,-707 1147.5,-707 1153.5,-707 1159.5,-713 1159.5,-719 1159.5,-719 1159.5,-778 1159.5,-778 1159.5,-784 1153.5,-790 1147.5,-790" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-774.8">node #5</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-759.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-744.8">samples = 47</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-729.8">value = [0, 47, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-714.8">class = versicolor</text>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g class="edge" id="edge5">
+<title>4-&gt;5</title>
+<path d="M774.78,-673.3C848.97,-690.56 957.76,-715.87 1028.24,-732.27" fill="none" stroke="black"></path>
+<polygon fill="black" points="1027.82,-735.76 1038.35,-734.62 1029.4,-728.95 1027.82,-735.76" stroke="black"></polygon>
+</g>
+<!-- 6 -->
+<g class="node" id="node7">
+<title>6</title>
+<path d="M1143.5,-689C1143.5,-689 1054.5,-689 1054.5,-689 1048.5,-689 1042.5,-683 1042.5,-677 1042.5,-677 1042.5,-618 1042.5,-618 1042.5,-612 1048.5,-606 1054.5,-606 1054.5,-606 1143.5,-606 1143.5,-606 1149.5,-606 1155.5,-612 1155.5,-618 1155.5,-618 1155.5,-677 1155.5,-677 1155.5,-683 1149.5,-689 1143.5,-689" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-673.8">node #6</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-658.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-643.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-628.8">value = [0, 0, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-613.8">class = virginica</text>
+</g>
+<!-- 4&#45;&gt;6 -->
+<g class="edge" id="edge6">
+<title>4-&gt;6</title>
+<path d="M774.78,-653.1C850.39,-651.79 961.96,-649.86 1032.26,-648.64" fill="none" stroke="black"></path>
+<polygon fill="black" points="1032.39,-652.14 1042.33,-648.46 1032.27,-645.14 1032.39,-652.14" stroke="black"></polygon>
+</g>
+<!-- 8 -->
+<g class="node" id="node9">
+<title>8</title>
+<path d="M1143.5,-588C1143.5,-588 1054.5,-588 1054.5,-588 1048.5,-588 1042.5,-582 1042.5,-576 1042.5,-576 1042.5,-517 1042.5,-517 1042.5,-511 1048.5,-505 1054.5,-505 1054.5,-505 1143.5,-505 1143.5,-505 1149.5,-505 1155.5,-511 1155.5,-517 1155.5,-517 1155.5,-576 1155.5,-576 1155.5,-582 1149.5,-588 1143.5,-588" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-572.8">node #8</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-557.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-542.8">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-527.8">value = [0, 0, 3]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-512.8">class = virginica</text>
+</g>
+<!-- 7&#45;&gt;8 -->
+<g class="edge" id="edge8">
+<title>7-&gt;8</title>
+<path d="M774.78,-540.1C850.39,-541.6 961.96,-543.81 1032.26,-545.2" fill="none" stroke="black"></path>
+<polygon fill="black" points="1032.26,-548.7 1042.33,-545.4 1032.4,-541.7 1032.26,-548.7" stroke="black"></polygon>
+</g>
+<!-- 9 -->
+<g class="node" id="node10">
+<title>9</title>
+<path d="M969.5,-494.5C969.5,-494.5 822.5,-494.5 822.5,-494.5 816.5,-494.5 810.5,-488.5 810.5,-482.5 810.5,-482.5 810.5,-408.5 810.5,-408.5 810.5,-402.5 816.5,-396.5 822.5,-396.5 822.5,-396.5 969.5,-396.5 969.5,-396.5 975.5,-396.5 981.5,-402.5 981.5,-408.5 981.5,-408.5 981.5,-482.5 981.5,-482.5 981.5,-488.5 975.5,-494.5 969.5,-494.5" fill="#9cf2c0" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-479.3">node #9</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-464.3">sepal length (cm) &lt;= 6.95</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-449.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-434.3">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-419.3">value = [0, 2, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-404.3">class = versicolor</text>
+</g>
+<!-- 7&#45;&gt;9 -->
+<g class="edge" id="edge9">
+<title>7-&gt;9</title>
+<path d="M774.6,-501.21C783.35,-497.16 792.32,-493.01 801.21,-488.9" fill="none" stroke="black"></path>
+<polygon fill="black" points="802.83,-492 810.44,-484.62 799.9,-485.65 802.83,-492" stroke="black"></polygon>
+</g>
+<!-- 10 -->
+<g class="node" id="node11">
+<title>10</title>
+<path d="M1147.5,-487C1147.5,-487 1050.5,-487 1050.5,-487 1044.5,-487 1038.5,-481 1038.5,-475 1038.5,-475 1038.5,-416 1038.5,-416 1038.5,-410 1044.5,-404 1050.5,-404 1050.5,-404 1147.5,-404 1147.5,-404 1153.5,-404 1159.5,-410 1159.5,-416 1159.5,-416 1159.5,-475 1159.5,-475 1159.5,-481 1153.5,-487 1147.5,-487" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-471.8">node #10</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-456.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-441.8">samples = 2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-426.8">value = [0, 2, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-411.8">class = versicolor</text>
+</g>
+<!-- 9&#45;&gt;10 -->
+<g class="edge" id="edge10">
+<title>9-&gt;10</title>
+<path d="M981.66,-445.5C997.18,-445.5 1013.21,-445.5 1028.23,-445.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="1028.45,-449 1038.45,-445.5 1028.45,-442 1028.45,-449" stroke="black"></polygon>
+</g>
+<!-- 11 -->
+<g class="node" id="node12">
+<title>11</title>
+<path d="M1143.5,-386C1143.5,-386 1054.5,-386 1054.5,-386 1048.5,-386 1042.5,-380 1042.5,-374 1042.5,-374 1042.5,-315 1042.5,-315 1042.5,-309 1048.5,-303 1054.5,-303 1054.5,-303 1143.5,-303 1143.5,-303 1149.5,-303 1155.5,-309 1155.5,-315 1155.5,-315 1155.5,-374 1155.5,-374 1155.5,-380 1149.5,-386 1143.5,-386" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-370.8">node #11</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-355.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-340.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-325.8">value = [0, 0, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-310.8">class = virginica</text>
+</g>
+<!-- 9&#45;&gt;11 -->
+<g class="edge" id="edge11">
+<title>9-&gt;11</title>
+<path d="M981.66,-402.96C998.95,-394.27 1016.88,-385.26 1033.34,-376.99" fill="none" stroke="black"></path>
+<polygon fill="black" points="1034.95,-380.1 1042.32,-372.48 1031.81,-373.84 1034.95,-380.1" stroke="black"></polygon>
+</g>
+<!-- 13 -->
+<g class="node" id="node14">
+<title>13</title>
+<path d="M760,-242.5C760,-242.5 626,-242.5 626,-242.5 620,-242.5 614,-236.5 614,-230.5 614,-230.5 614,-156.5 614,-156.5 614,-150.5 620,-144.5 626,-144.5 626,-144.5 760,-144.5 760,-144.5 766,-144.5 772,-150.5 772,-156.5 772,-156.5 772,-230.5 772,-230.5 772,-236.5 766,-242.5 760,-242.5" fill="#c09cf2" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-227.3">node #13</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-212.3">sepal width (cm) &lt;= 3.1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-197.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-182.3">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-167.3">value = [0, 1, 2]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-152.3">class = virginica</text>
+</g>
+<!-- 12&#45;&gt;13 -->
+<g class="edge" id="edge13">
+<title>12-&gt;13</title>
+<path d="M574.21,-193.5C583.9,-193.5 593.82,-193.5 603.59,-193.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="603.7,-197 613.7,-193.5 603.7,-190 603.7,-197" stroke="black"></polygon>
+</g>
+<!-- 16 -->
+<g class="node" id="node17">
+<title>16</title>
+<path d="M1145.5,-83C1145.5,-83 1052.5,-83 1052.5,-83 1046.5,-83 1040.5,-77 1040.5,-71 1040.5,-71 1040.5,-12 1040.5,-12 1040.5,-6 1046.5,0 1052.5,0 1052.5,0 1145.5,0 1145.5,0 1151.5,0 1157.5,-6 1157.5,-12 1157.5,-12 1157.5,-71 1157.5,-71 1157.5,-77 1151.5,-83 1145.5,-83" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-67.8">node #16</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-52.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-37.8">samples = 43</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-22.8">value = [0, 0, 43]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-7.8">class = virginica</text>
+</g>
+<!-- 12&#45;&gt;16 -->
+<g class="edge" id="edge16">
+<title>12-&gt;16</title>
+<path d="M574.03,-153.53C594.91,-143.49 611.5,-135.5 611.5,-135.5 611.5,-135.5 896.38,-80.46 1030.14,-54.61" fill="none" stroke="black"></path>
+<polygon fill="black" points="1031.13,-57.99 1040.28,-52.65 1029.8,-51.11 1031.13,-57.99" stroke="black"></polygon>
+</g>
+<!-- 14 -->
+<g class="node" id="node15">
+<title>14</title>
+<path d="M1143.5,-285C1143.5,-285 1054.5,-285 1054.5,-285 1048.5,-285 1042.5,-279 1042.5,-273 1042.5,-273 1042.5,-214 1042.5,-214 1042.5,-208 1048.5,-202 1054.5,-202 1054.5,-202 1143.5,-202 1143.5,-202 1149.5,-202 1155.5,-208 1155.5,-214 1155.5,-214 1155.5,-273 1155.5,-273 1155.5,-279 1149.5,-285 1143.5,-285" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-269.8">node #14</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-254.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-239.8">samples = 2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-224.8">value = [0, 0, 2]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-209.8">class = virginica</text>
+</g>
+<!-- 13&#45;&gt;14 -->
+<g class="edge" id="edge14">
+<title>13-&gt;14</title>
+<path d="M772.37,-203.2C847.94,-212.55 961,-226.54 1032.07,-235.34" fill="none" stroke="black"></path>
+<polygon fill="black" points="1031.89,-238.84 1042.24,-236.6 1032.75,-231.9 1031.89,-238.84" stroke="black"></polygon>
+</g>
+<!-- 15 -->
+<g class="node" id="node16">
+<title>15</title>
+<path d="M1147.5,-184C1147.5,-184 1050.5,-184 1050.5,-184 1044.5,-184 1038.5,-178 1038.5,-172 1038.5,-172 1038.5,-113 1038.5,-113 1038.5,-107 1044.5,-101 1050.5,-101 1050.5,-101 1147.5,-101 1147.5,-101 1153.5,-101 1159.5,-107 1159.5,-113 1159.5,-113 1159.5,-172 1159.5,-172 1159.5,-178 1153.5,-184 1147.5,-184" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-168.8">node #15</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-153.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-138.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-123.8">value = [0, 1, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-108.8">class = versicolor</text>
+</g>
+<!-- 13&#45;&gt;15 -->
+<g class="edge" id="edge15">
+<title>13-&gt;15</title>
+<path d="M772.37,-183.61C846.52,-174.25 956.76,-160.33 1028.02,-151.33" fill="none" stroke="black"></path>
+<polygon fill="black" points="1028.75,-154.77 1038.24,-150.04 1027.88,-147.82 1028.75,-154.77" stroke="black"></polygon>
+</g>
+</g>
+</svg></div>
+</div>
+<div id="thumbViewContainer">
+<svg class="thumbViewClass" id="scopeContainer">
+<g>
+<rect fill="blue" fill-opacity="0.1" height="0" id="scope" stroke="blue" stroke-width="2px" width="0" x="0" y="0"></rect>
+<line id="line1" stroke="blue" stroke-width="2px" x1="0" x2="0" y1="0" y2="0"></line>
+<line id="line2" stroke="blue" stroke-width="2px" x1="0" x2="0" y1="0" y2="0"></line>
+</g>
+</svg>
+<div class="thumbViewClass" id="thumbView">
+<svg height="899pt" id="thumbSVG" viewbox="0.00 0.00 1167.50 899.00" width="1168pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 895)">
+<title>Tree</title>
+<polygon fill="white" points="-4,4 -4,-895 1163.5,-895 1163.5,4 -4,4" stroke="transparent"></polygon>
+<!-- 0 -->
+<g class="node" id="node1">
+<title>0</title>
+<path d="M156,-804.5C156,-804.5 12,-804.5 12,-804.5 6,-804.5 0,-798.5 0,-792.5 0,-792.5 0,-718.5 0,-718.5 0,-712.5 6,-706.5 12,-706.5 12,-706.5 156,-706.5 156,-706.5 162,-706.5 168,-712.5 168,-718.5 168,-718.5 168,-792.5 168,-792.5 168,-798.5 162,-804.5 156,-804.5" fill="#ffffff" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-789.3">node #0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-774.3">petal length (cm) &lt;= 2.45</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-759.3">gini = 0.667</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-744.3">samples = 150</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-729.3">value = [50, 50, 50]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="84" y="-714.3">class = setosa</text>
+</g>
+<!-- 1 -->
+<g class="node" id="node2">
+<title>1</title>
+<path d="M1145.5,-891C1145.5,-891 1052.5,-891 1052.5,-891 1046.5,-891 1040.5,-885 1040.5,-879 1040.5,-879 1040.5,-820 1040.5,-820 1040.5,-814 1046.5,-808 1052.5,-808 1052.5,-808 1145.5,-808 1145.5,-808 1151.5,-808 1157.5,-814 1157.5,-820 1157.5,-820 1157.5,-879 1157.5,-879 1157.5,-885 1151.5,-891 1145.5,-891" fill="#e58139" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-875.8">node #1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-860.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-845.8">samples = 50</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-830.8">value = [50, 0, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-815.8">class = setosa</text>
+</g>
+<!-- 0&#45;&gt;1 -->
+<g class="edge" id="edge1">
+<title>0-&gt;1</title>
+<path d="M168.22,-774.86C286.48,-802.38 489,-849.5 489,-849.5 489,-849.5 489,-849.5 694,-849.5 694,-849.5 914.87,-849.5 1029.99,-849.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="1030.12,-853 1040.12,-849.5 1030.12,-846 1030.12,-853" stroke="black"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1022.44" y="-863.48">True</text>
+</g>
+<!-- 2 -->
+<g class="node" id="node3">
+<title>2</title>
+<path d="M356.5,-645.5C356.5,-645.5 217.5,-645.5 217.5,-645.5 211.5,-645.5 205.5,-639.5 205.5,-633.5 205.5,-633.5 205.5,-559.5 205.5,-559.5 205.5,-553.5 211.5,-547.5 217.5,-547.5 217.5,-547.5 356.5,-547.5 356.5,-547.5 362.5,-547.5 368.5,-553.5 368.5,-559.5 368.5,-559.5 368.5,-633.5 368.5,-633.5 368.5,-639.5 362.5,-645.5 356.5,-645.5" fill="#ffffff" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-630.3">node #2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-615.3">petal width (cm) &lt;= 1.75</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-600.3">gini = 0.5</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-585.3">samples = 100</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-570.3">value = [0, 50, 50]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="287" y="-555.3">class = versicolor</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g class="edge" id="edge2">
+<title>0-&gt;2</title>
+<path d="M146.95,-706.5C168.82,-689.19 193.57,-669.62 216.06,-651.83" fill="none" stroke="black"></path>
+<polygon fill="black" points="218.24,-654.56 223.91,-645.61 213.9,-649.07 218.24,-654.56" stroke="black"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="199.08" y="-639.02">False</text>
+</g>
+<!-- 3 -->
+<g class="node" id="node4">
+<title>3</title>
+<path d="M562,-645.5C562,-645.5 418,-645.5 418,-645.5 412,-645.5 406,-639.5 406,-633.5 406,-633.5 406,-559.5 406,-559.5 406,-553.5 412,-547.5 418,-547.5 418,-547.5 562,-547.5 562,-547.5 568,-547.5 574,-553.5 574,-559.5 574,-559.5 574,-633.5 574,-633.5 574,-639.5 568,-645.5 562,-645.5" fill="#4de88e" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-630.3">node #3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-615.3">petal length (cm) &lt;= 4.95</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-600.3">gini = 0.168</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-585.3">samples = 54</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-570.3">value = [0, 49, 5]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-555.3">class = versicolor</text>
+</g>
+<!-- 2&#45;&gt;3 -->
+<g class="edge" id="edge3">
+<title>2-&gt;3</title>
+<path d="M368.6,-596.5C377.48,-596.5 386.59,-596.5 395.61,-596.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="395.76,-600 405.76,-596.5 395.76,-593 395.76,-600" stroke="black"></polygon>
+</g>
+<!-- 12 -->
+<g class="node" id="node13">
+<title>12</title>
+<path d="M562,-242.5C562,-242.5 418,-242.5 418,-242.5 412,-242.5 406,-236.5 406,-230.5 406,-230.5 406,-156.5 406,-156.5 406,-150.5 412,-144.5 418,-144.5 418,-144.5 562,-144.5 562,-144.5 568,-144.5 574,-150.5 574,-156.5 574,-156.5 574,-230.5 574,-230.5 574,-236.5 568,-242.5 562,-242.5" fill="#843de6" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-227.3">node #12</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-212.3">petal length (cm) &lt;= 4.85</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-197.3">gini = 0.043</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-182.3">samples = 46</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-167.3">value = [0, 1, 45]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="490" y="-152.3">class = virginica</text>
+</g>
+<!-- 2&#45;&gt;12 -->
+<g class="edge" id="edge12">
+<title>2-&gt;12</title>
+<path d="M312.45,-547.49C349.54,-473.11 419.94,-331.97 459.72,-252.21" fill="none" stroke="black"></path>
+<polygon fill="black" points="463.08,-253.31 464.41,-242.8 456.82,-250.19 463.08,-253.31" stroke="black"></polygon>
+</g>
+<!-- 4 -->
+<g class="node" id="node5">
+<title>4</title>
+<path d="M762.5,-703.5C762.5,-703.5 623.5,-703.5 623.5,-703.5 617.5,-703.5 611.5,-697.5 611.5,-691.5 611.5,-691.5 611.5,-617.5 611.5,-617.5 611.5,-611.5 617.5,-605.5 623.5,-605.5 623.5,-605.5 762.5,-605.5 762.5,-605.5 768.5,-605.5 774.5,-611.5 774.5,-617.5 774.5,-617.5 774.5,-691.5 774.5,-691.5 774.5,-697.5 768.5,-703.5 762.5,-703.5" fill="#3de684" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-688.3">node #4</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-673.3">petal width (cm) &lt;= 1.65</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-658.3">gini = 0.041</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-643.3">samples = 48</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-628.3">value = [0, 47, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-613.3">class = versicolor</text>
+</g>
+<!-- 3&#45;&gt;4 -->
+<g class="edge" id="edge4">
+<title>3-&gt;4</title>
+<path d="M574.21,-620.51C583.25,-623.12 592.48,-625.78 601.6,-628.42" fill="none" stroke="black"></path>
+<polygon fill="black" points="600.86,-631.85 611.44,-631.25 602.81,-625.12 600.86,-631.85" stroke="black"></polygon>
+</g>
+<!-- 7 -->
+<g class="node" id="node8">
+<title>7</title>
+<path d="M762.5,-587.5C762.5,-587.5 623.5,-587.5 623.5,-587.5 617.5,-587.5 611.5,-581.5 611.5,-575.5 611.5,-575.5 611.5,-501.5 611.5,-501.5 611.5,-495.5 617.5,-489.5 623.5,-489.5 623.5,-489.5 762.5,-489.5 762.5,-489.5 768.5,-489.5 774.5,-495.5 774.5,-501.5 774.5,-501.5 774.5,-575.5 774.5,-575.5 774.5,-581.5 768.5,-587.5 762.5,-587.5" fill="#c09cf2" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-572.3">node #7</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-557.3">petal width (cm) &lt;= 1.55</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-542.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-527.3">samples = 6</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-512.3">value = [0, 2, 4]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-497.3">class = virginica</text>
+</g>
+<!-- 3&#45;&gt;7 -->
+<g class="edge" id="edge7">
+<title>3-&gt;7</title>
+<path d="M574.21,-572.49C583.25,-569.88 592.48,-567.22 601.6,-564.58" fill="none" stroke="black"></path>
+<polygon fill="black" points="602.81,-567.88 611.44,-561.75 600.86,-561.15 602.81,-567.88" stroke="black"></polygon>
+</g>
+<!-- 5 -->
+<g class="node" id="node6">
+<title>5</title>
+<path d="M1147.5,-790C1147.5,-790 1050.5,-790 1050.5,-790 1044.5,-790 1038.5,-784 1038.5,-778 1038.5,-778 1038.5,-719 1038.5,-719 1038.5,-713 1044.5,-707 1050.5,-707 1050.5,-707 1147.5,-707 1147.5,-707 1153.5,-707 1159.5,-713 1159.5,-719 1159.5,-719 1159.5,-778 1159.5,-778 1159.5,-784 1153.5,-790 1147.5,-790" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-774.8">node #5</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-759.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-744.8">samples = 47</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-729.8">value = [0, 47, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-714.8">class = versicolor</text>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g class="edge" id="edge5">
+<title>4-&gt;5</title>
+<path d="M774.78,-673.3C848.97,-690.56 957.76,-715.87 1028.24,-732.27" fill="none" stroke="black"></path>
+<polygon fill="black" points="1027.82,-735.76 1038.35,-734.62 1029.4,-728.95 1027.82,-735.76" stroke="black"></polygon>
+</g>
+<!-- 6 -->
+<g class="node" id="node7">
+<title>6</title>
+<path d="M1143.5,-689C1143.5,-689 1054.5,-689 1054.5,-689 1048.5,-689 1042.5,-683 1042.5,-677 1042.5,-677 1042.5,-618 1042.5,-618 1042.5,-612 1048.5,-606 1054.5,-606 1054.5,-606 1143.5,-606 1143.5,-606 1149.5,-606 1155.5,-612 1155.5,-618 1155.5,-618 1155.5,-677 1155.5,-677 1155.5,-683 1149.5,-689 1143.5,-689" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-673.8">node #6</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-658.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-643.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-628.8">value = [0, 0, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-613.8">class = virginica</text>
+</g>
+<!-- 4&#45;&gt;6 -->
+<g class="edge" id="edge6">
+<title>4-&gt;6</title>
+<path d="M774.78,-653.1C850.39,-651.79 961.96,-649.86 1032.26,-648.64" fill="none" stroke="black"></path>
+<polygon fill="black" points="1032.39,-652.14 1042.33,-648.46 1032.27,-645.14 1032.39,-652.14" stroke="black"></polygon>
+</g>
+<!-- 8 -->
+<g class="node" id="node9">
+<title>8</title>
+<path d="M1143.5,-588C1143.5,-588 1054.5,-588 1054.5,-588 1048.5,-588 1042.5,-582 1042.5,-576 1042.5,-576 1042.5,-517 1042.5,-517 1042.5,-511 1048.5,-505 1054.5,-505 1054.5,-505 1143.5,-505 1143.5,-505 1149.5,-505 1155.5,-511 1155.5,-517 1155.5,-517 1155.5,-576 1155.5,-576 1155.5,-582 1149.5,-588 1143.5,-588" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-572.8">node #8</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-557.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-542.8">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-527.8">value = [0, 0, 3]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-512.8">class = virginica</text>
+</g>
+<!-- 7&#45;&gt;8 -->
+<g class="edge" id="edge8">
+<title>7-&gt;8</title>
+<path d="M774.78,-540.1C850.39,-541.6 961.96,-543.81 1032.26,-545.2" fill="none" stroke="black"></path>
+<polygon fill="black" points="1032.26,-548.7 1042.33,-545.4 1032.4,-541.7 1032.26,-548.7" stroke="black"></polygon>
+</g>
+<!-- 9 -->
+<g class="node" id="node10">
+<title>9</title>
+<path d="M969.5,-494.5C969.5,-494.5 822.5,-494.5 822.5,-494.5 816.5,-494.5 810.5,-488.5 810.5,-482.5 810.5,-482.5 810.5,-408.5 810.5,-408.5 810.5,-402.5 816.5,-396.5 822.5,-396.5 822.5,-396.5 969.5,-396.5 969.5,-396.5 975.5,-396.5 981.5,-402.5 981.5,-408.5 981.5,-408.5 981.5,-482.5 981.5,-482.5 981.5,-488.5 975.5,-494.5 969.5,-494.5" fill="#9cf2c0" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-479.3">node #9</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-464.3">sepal length (cm) &lt;= 6.95</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-449.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-434.3">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-419.3">value = [0, 2, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="896" y="-404.3">class = versicolor</text>
+</g>
+<!-- 7&#45;&gt;9 -->
+<g class="edge" id="edge9">
+<title>7-&gt;9</title>
+<path d="M774.6,-501.21C783.35,-497.16 792.32,-493.01 801.21,-488.9" fill="none" stroke="black"></path>
+<polygon fill="black" points="802.83,-492 810.44,-484.62 799.9,-485.65 802.83,-492" stroke="black"></polygon>
+</g>
+<!-- 10 -->
+<g class="node" id="node11">
+<title>10</title>
+<path d="M1147.5,-487C1147.5,-487 1050.5,-487 1050.5,-487 1044.5,-487 1038.5,-481 1038.5,-475 1038.5,-475 1038.5,-416 1038.5,-416 1038.5,-410 1044.5,-404 1050.5,-404 1050.5,-404 1147.5,-404 1147.5,-404 1153.5,-404 1159.5,-410 1159.5,-416 1159.5,-416 1159.5,-475 1159.5,-475 1159.5,-481 1153.5,-487 1147.5,-487" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-471.8">node #10</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-456.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-441.8">samples = 2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-426.8">value = [0, 2, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-411.8">class = versicolor</text>
+</g>
+<!-- 9&#45;&gt;10 -->
+<g class="edge" id="edge10">
+<title>9-&gt;10</title>
+<path d="M981.66,-445.5C997.18,-445.5 1013.21,-445.5 1028.23,-445.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="1028.45,-449 1038.45,-445.5 1028.45,-442 1028.45,-449" stroke="black"></polygon>
+</g>
+<!-- 11 -->
+<g class="node" id="node12">
+<title>11</title>
+<path d="M1143.5,-386C1143.5,-386 1054.5,-386 1054.5,-386 1048.5,-386 1042.5,-380 1042.5,-374 1042.5,-374 1042.5,-315 1042.5,-315 1042.5,-309 1048.5,-303 1054.5,-303 1054.5,-303 1143.5,-303 1143.5,-303 1149.5,-303 1155.5,-309 1155.5,-315 1155.5,-315 1155.5,-374 1155.5,-374 1155.5,-380 1149.5,-386 1143.5,-386" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-370.8">node #11</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-355.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-340.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-325.8">value = [0, 0, 1]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-310.8">class = virginica</text>
+</g>
+<!-- 9&#45;&gt;11 -->
+<g class="edge" id="edge11">
+<title>9-&gt;11</title>
+<path d="M981.66,-402.96C998.95,-394.27 1016.88,-385.26 1033.34,-376.99" fill="none" stroke="black"></path>
+<polygon fill="black" points="1034.95,-380.1 1042.32,-372.48 1031.81,-373.84 1034.95,-380.1" stroke="black"></polygon>
+</g>
+<!-- 13 -->
+<g class="node" id="node14">
+<title>13</title>
+<path d="M760,-242.5C760,-242.5 626,-242.5 626,-242.5 620,-242.5 614,-236.5 614,-230.5 614,-230.5 614,-156.5 614,-156.5 614,-150.5 620,-144.5 626,-144.5 626,-144.5 760,-144.5 760,-144.5 766,-144.5 772,-150.5 772,-156.5 772,-156.5 772,-230.5 772,-230.5 772,-236.5 766,-242.5 760,-242.5" fill="#c09cf2" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-227.3">node #13</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-212.3">sepal width (cm) &lt;= 3.1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-197.3">gini = 0.444</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-182.3">samples = 3</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-167.3">value = [0, 1, 2]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="693" y="-152.3">class = virginica</text>
+</g>
+<!-- 12&#45;&gt;13 -->
+<g class="edge" id="edge13">
+<title>12-&gt;13</title>
+<path d="M574.21,-193.5C583.9,-193.5 593.82,-193.5 603.59,-193.5" fill="none" stroke="black"></path>
+<polygon fill="black" points="603.7,-197 613.7,-193.5 603.7,-190 603.7,-197" stroke="black"></polygon>
+</g>
+<!-- 16 -->
+<g class="node" id="node17">
+<title>16</title>
+<path d="M1145.5,-83C1145.5,-83 1052.5,-83 1052.5,-83 1046.5,-83 1040.5,-77 1040.5,-71 1040.5,-71 1040.5,-12 1040.5,-12 1040.5,-6 1046.5,0 1052.5,0 1052.5,0 1145.5,0 1145.5,0 1151.5,0 1157.5,-6 1157.5,-12 1157.5,-12 1157.5,-71 1157.5,-71 1157.5,-77 1151.5,-83 1145.5,-83" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-67.8">node #16</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-52.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-37.8">samples = 43</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-22.8">value = [0, 0, 43]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-7.8">class = virginica</text>
+</g>
+<!-- 12&#45;&gt;16 -->
+<g class="edge" id="edge16">
+<title>12-&gt;16</title>
+<path d="M574.03,-153.53C594.91,-143.49 611.5,-135.5 611.5,-135.5 611.5,-135.5 896.38,-80.46 1030.14,-54.61" fill="none" stroke="black"></path>
+<polygon fill="black" points="1031.13,-57.99 1040.28,-52.65 1029.8,-51.11 1031.13,-57.99" stroke="black"></polygon>
+</g>
+<!-- 14 -->
+<g class="node" id="node15">
+<title>14</title>
+<path d="M1143.5,-285C1143.5,-285 1054.5,-285 1054.5,-285 1048.5,-285 1042.5,-279 1042.5,-273 1042.5,-273 1042.5,-214 1042.5,-214 1042.5,-208 1048.5,-202 1054.5,-202 1054.5,-202 1143.5,-202 1143.5,-202 1149.5,-202 1155.5,-208 1155.5,-214 1155.5,-214 1155.5,-273 1155.5,-273 1155.5,-279 1149.5,-285 1143.5,-285" fill="#8139e5" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-269.8">node #14</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-254.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-239.8">samples = 2</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-224.8">value = [0, 0, 2]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-209.8">class = virginica</text>
+</g>
+<!-- 13&#45;&gt;14 -->
+<g class="edge" id="edge14">
+<title>13-&gt;14</title>
+<path d="M772.37,-203.2C847.94,-212.55 961,-226.54 1032.07,-235.34" fill="none" stroke="black"></path>
+<polygon fill="black" points="1031.89,-238.84 1042.24,-236.6 1032.75,-231.9 1031.89,-238.84" stroke="black"></polygon>
+</g>
+<!-- 15 -->
+<g class="node" id="node16">
+<title>15</title>
+<path d="M1147.5,-184C1147.5,-184 1050.5,-184 1050.5,-184 1044.5,-184 1038.5,-178 1038.5,-172 1038.5,-172 1038.5,-113 1038.5,-113 1038.5,-107 1044.5,-101 1050.5,-101 1050.5,-101 1147.5,-101 1147.5,-101 1153.5,-101 1159.5,-107 1159.5,-113 1159.5,-113 1159.5,-172 1159.5,-172 1159.5,-178 1153.5,-184 1147.5,-184" fill="#39e581" stroke="black"></path>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-168.8">node #15</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-153.8">gini = 0.0</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-138.8">samples = 1</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-123.8">value = [0, 1, 0]</text>
+<text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="1099" y="-108.8">class = versicolor</text>
+</g>
+<!-- 13&#45;&gt;15 -->
+<g class="edge" id="edge15">
+<title>13-&gt;15</title>
+<path d="M772.37,-183.61C846.52,-174.25 956.76,-160.33 1028.02,-151.33" fill="none" stroke="black"></path>
+<polygon fill="black" points="1028.75,-154.77 1038.24,-150.04 1027.88,-147.82 1028.75,-154.77" stroke="black"></polygon>
+</g>
+</g>
+</svg></div>
+</div>
+<!-- Scripts -->
+<script>
+        var thumbnailViewer = function(options) {
+      var getSVGDocument = function(objectElem) {
+        var svgDoc = objectElem.contentDocument;
+        if (!svgDoc) {
+          if (typeof objectElem.getSVGDocument === "function") {
+            svgDoc = objectElem.getSVGDocument();
+          }
+        }
+        return svgDoc;
+      }
+
+      var bindThumbnail = function(main, thumb, scopeContainerId) {
+        if (!window.main && main) {
+          window.main = main;
+        }
+        if (!window.thumb && thumb) {
+          window.thumb = thumb;
+        }
+        if (!window.main || !window.thumb) {
+          return;
+        }
+
+        var resizeTimer;
+        var interval = 300; 
+        window.addEventListener('resize', function(event) {
+          if (resizeTimer !== false) {
+            clearTimeout(resizeTimer);
+          }
+          resizeTimer = setTimeout(function() {
+            window.main.resize();
+            window.thumb.resize();
+          }, interval);
+        });
+
+        window.main.setOnZoom(function(level) {
+          window.thumb.updateThumbScope();
+          if (options.onZoom) {
+            options.onZoom(window.main, window.thumb, level);
+          }
+        });
+
+        window.main.setOnPan(function(point) {
+          window.thumb.updateThumbScope();
+          if (options.onPan) {
+            options.onPan(window.main, window.thumb, point);
+          }
+        });
+
+        var _updateThumbScope = function(main, thumb, scope, line1, line2) {
+          var mainPanX = main.getPan().x,
+            mainPanY = main.getPan().y,
+            mainWidth = main.getSizes().width,
+            mainHeight = main.getSizes().height,
+            mainZoom = main.getSizes().realZoom,
+            thumbPanX = thumb.getPan().x,
+            thumbPanY = thumb.getPan().y,
+            thumbZoom = thumb.getSizes().realZoom;
+
+          var thumByMainZoomRatio = thumbZoom / mainZoom;
+
+          var scopeX = thumbPanX - mainPanX * thumByMainZoomRatio;
+          var scopeY = thumbPanY - mainPanY * thumByMainZoomRatio;
+          var scopeWidth = mainWidth * thumByMainZoomRatio;
+          var scopeHeight = mainHeight * thumByMainZoomRatio;
+
+          scope.setAttribute("x", scopeX + 1);
+          scope.setAttribute("y", scopeY + 1);
+          scope.setAttribute("width", scopeWidth - 2);
+          scope.setAttribute("height", scopeHeight - 2);
+        };
+
+        window.thumb.updateThumbScope = function() {
+          var scope = document.getElementById('scope');
+          var line1 = document.getElementById('line1');
+          var line2 = document.getElementById('line2');
+          _updateThumbScope(window.main, window.thumb, scope, line1, line2);
+        }
+        window.thumb.updateThumbScope();
+
+        var _updateMainViewPan = function(clientX, clientY, scopeContainer, main, thumb) {
+          var dim = scopeContainer.getBoundingClientRect(),
+            mainWidth = main.getSizes().width,
+            mainHeight = main.getSizes().height,
+            mainZoom = main.getSizes().realZoom,
+            thumbWidth = thumb.getSizes().width,
+            thumbHeight = thumb.getSizes().height,
+            thumbZoom = thumb.getSizes().realZoom;
+
+          var thumbPanX = clientX - dim.left - thumbWidth / 2;
+          var thumbPanY = clientY - dim.top - thumbHeight / 2;
+          var mainPanX = -thumbPanX * mainZoom / thumbZoom;
+          var mainPanY = -thumbPanY * mainZoom / thumbZoom;
+          main.pan({
+            x: mainPanX,
+            y: mainPanY
+          });
+        };
+        var updateMainViewPan = function(evt, scopeContainerId) {
+          if (evt.which == 0 && evt.button == 0) {
+            return false;
+          }
+          var scopeContainer = document.getElementById(scopeContainerId);
+          _updateMainViewPan(evt.clientX, evt.clientY, scopeContainer, window.main, window.thumb);
+        }
+
+        var scopeContainer = document.getElementById(scopeContainerId);
+        scopeContainer.addEventListener('click', function(evt) {
+          updateMainViewPan(evt, scopeContainerId);
+        });
+
+        scopeContainer.addEventListener('mousemove', function(evt) {
+          updateMainViewPan(evt, scopeContainerId);
+        });
+      };
+
+      var initMainView = function() {
+        var mainViewSVGDoc = getSVGDocument(mainViewObjectElem);
+        if (options.onMainViewSVGLoaded) {
+          options.onMainViewSVGLoaded(mainViewSVGDoc);
+        }
+
+        var beforePan = function(oldPan, newPan) {
+          var stopHorizontal = false,
+            stopVertical = false,
+            gutterWidth = 100,
+            gutterHeight = 100
+            // Computed variables
+            ,
+            sizes = this.getSizes(),
+            leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth,
+            rightLimit = sizes.width - gutterWidth - (sizes.viewBox.x * sizes.realZoom),
+            topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight,
+            bottomLimit = sizes.height - gutterHeight - (sizes.viewBox.y * sizes.realZoom);
+          customPan = {};
+          customPan.x = Math.max(leftLimit, Math.min(rightLimit, newPan.x));
+          customPan.y = Math.max(topLimit, Math.min(bottomLimit, newPan.y));
+          return customPan;
+        };
+
+        var main = svgPanZoom('#' + options.mainSVGId, {
+          zoomEnabled: true,
+          controlIconsEnabled: true,
+          fit: true,
+          center: true,
+          beforePan: beforePan,
+        });
+
+
+        bindThumbnail(main, undefined, options.scopeContainerId);
+        if (options.onMainViewShown) {
+          options.onMainViewShown(mainViewSVGDoc, main);
+        }
+      };
+      var mainViewObjectElem = document.getElementById(options.mainSVGId);
+      mainViewObjectElem.addEventListener("load", function() {
+        initMainView();
+      }, false);
+
+      var initThumbView = function() {
+        var thumbViewSVGDoc = getSVGDocument(thumbViewObjectElem);
+        if (options.onThumbnailSVGLoaded) {
+          options.onThumbnailSVGLoaded(thumbViewSVGDoc);
+        }
+
+        var thumb = svgPanZoom('#' + options.thumbSVGId, {
+          fit: true,
+          zoomEnabled: false,
+          panEnabled: false,
+          controlIconsEnabled: false,
+          dblClickZoomEnabled: false,
+          preventMouseEventsDefault: true,
+        });
+
+        bindThumbnail(undefined, thumb, options.scopeContainerId);
+        if (options.onThumbnailShown) {
+          options.onThumbnailShown(thumbViewSVGDoc, thumb);
+        }
+      };
+      var thumbViewObjectElem = document.getElementById(options.thumbSVGId);
+      thumbViewObjectElem.addEventListener("load", function() {
+        initThumbView();
+      }, false);
+
+      initThumbView();
+      initMainView();
+    };
+      </script>
+<script>
+        window.onload = function() {
+          thumbnailViewer({
+            mainSVGId: 'mainSVG',
+            thumbSVGId: 'thumbSVG',
+            scopeContainerId: 'scopeContainer'
+          });
+        }
+      </script>
+</body></html>
